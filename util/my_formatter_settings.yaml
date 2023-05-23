@@ -160,16 +160,16 @@ lookForAlignDelims:
       delims: 1
       alignDoubleBackSlash: 0
       spacesBeforeDoubleBackSlash: 1
-      multiColumnGrouping: 0
+      multiColumnGrouping: 1
       alignRowsWithoutMaxDelims: 1
       spacesBeforeAmpersand: 1
       spacesAfterAmpersand: 1
       justification: left
-      alignFinalDoubleBackSlash: 1
-      dontMeasure: 0
+      alignFinalDoubleBackSlash: 0
+      dontMeasure: 1
       delimiterRegEx: (?<!\\)(&)
       delimiterJustification: left
-      lookForChildCodeBlocks: 1
+      lookForChildCodeBlocks: 0
       alignContentAfterDoubleBackSlash: 0
       spacesAfterDoubleBackSlash: 1
    tabularx:

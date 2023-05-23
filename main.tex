@@ -48,10 +48,10 @@
 
 \begin{figure*}[!t]
     \centering
-    \subfloat[]{\includegraphics[width=2.5in]{asset/placeholder_image.jpeg}%
+    \subfloat[]{\includegraphics[width=0.4\textwidth]{asset/placeholder_image.jpeg}%
         \label{fig_first_case}}
     \hfil
-    \subfloat[]{\includegraphics[width=2.5in]{asset/placeholder_image.jpeg}%
+    \subfloat[]{\includegraphics[width=0.4\textwidth]{asset/placeholder_image.jpeg}%
         \label{fig_second_case}}
     \caption{Dae. Ad quatur autat ut porepel itemoles dolor autem fuga. Bus quia con nessunti as remo di quatus non perum que nimus. (a) Case I. (b) Case II.}
     \label{fig_sim}
@@ -71,13 +71,13 @@ Antonova \etal~\cite{antonova_2021_SequentialTopologicalRepresentations} propose
     \centering
     \begin{tabular}{c c c c c c c}
         \toprule
-                       & \makecell{PVNet$^*$ \\ABC} & \makecell{PoseCNN +\\ICP~} & \makecell{DOPD\\ ABC} & \makecell{DenseFusion\\2} & \makecell{SSD6D+\\ICP~} & \makecell{DOPE} \\
+        & \makecell{PVNet$^*$ \\ABC} & \makecell{PoseCNN +\\ICP~} & \makecell{DOPD\\ ABC} & \makecell{DenseFusion\\2} & \makecell{SSD6D+\\ICP~} & \makecell{DOPE} \\
         \midrule
-        Modality       & RGB                        & RGB+D                      & RGB                   & RGBD                      & RGB+D                   & RGB \\
+        Modality       & RGB    & RGB+D  & RGB    & RGBD   & RGB+D  & RGB \\
         \midrule
-        Multi-Instance & \xmark                     & \xmark                     & \xmark                & \xmark                    & \cmark                  & \cmark \\
+        Multi-Instance & \xmark & \xmark & \xmark & \xmark & \cmark & \cmark \\
         \midrule
-        fps            & 25                         & 0.1                        & 33                    & 16                        & 10                      & 10 \\
+        fps            & 25     & 0.1    & 33     & 16     & 10     & 10 \\
         \bottomrule
         \multicolumn{7}{l}{\rule{0pt}{3.5ex} \textit{\makecell[l]{$^*$The reported runtime of PVNet is the based on the conference version, which does not incorporate \\ the instance-level segmentation pre-processing pipeline.}}}
     \end{tabular}
