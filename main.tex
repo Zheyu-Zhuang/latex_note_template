@@ -6,7 +6,7 @@
 \documentclass[letterpaper, 10 pt, conference, onecolumn]{IEEEtran}
 \IEEEoverridecommandlockouts % This command is only needed if you want to use the \thanks command
 
-\input{utils/preamble} % All the packages and some of the general newcommands
+\input{utils/preamble} % All the packages and some of the general new commands
 \input{utils/notation_defs} % For general notations defs
 
 %-----------------------------------------------------
@@ -17,19 +17,19 @@
 
 \title{\LARGE \bf The Best Title (with A Catchy Acronym)}
 \author{Author A$^{1}$ and Author B$^{2}$
-\thanks{*Author contributions}
-\thanks{$^{1}$AuthorA affiliations and contact info
-    {\tt\small authorA@mail.com}
+    \thanks{*Author contributions}
+    \thanks{$^{1}$AuthorA affiliations and contact info
+            {\tt\small authorA@mail.com}
     }
-\thanks{$^{2}$AuthorB affiliations and contact info
-    {\tt\small authorB@mail.com}
+    \thanks{$^{2}$AuthorB affiliations and contact info
+            {\tt\small authorB@mail.com}
     }
-\thanks{This project is funded by ...}
+    \thanks{This project is funded by ...}
 }
 \maketitle
 
 \begin{abstract}
-\lipsum[1-3]
+    \lipsum[1-3]
 \end{abstract}
 
 %-----------------------------------------------------
@@ -47,14 +47,14 @@
 \lipsum[1-3]
 
 \begin{figure*}[!t]
-\centering
-\subfloat[]{\includegraphics[width=2.5in]{asset/placeholder_image.jpeg}%
-\label{fig_first_case}}
-\hfil
-\subfloat[]{\includegraphics[width=2.5in]{asset/placeholder_image.jpeg}%
-\label{fig_second_case}}
-\caption{Dae. Ad quatur autat ut porepel itemoles dolor autem fuga. Bus quia con nessunti as remo di quatus non perum que nimus. (a) Case I. (b) Case II.}
-\label{fig_sim}
+    \centering
+    \subfloat[]{\includegraphics[width=2.5in]{asset/placeholder_image.jpeg}%
+        \label{fig_first_case}}
+    \hfil
+    \subfloat[]{\includegraphics[width=2.5in]{asset/placeholder_image.jpeg}%
+        \label{fig_second_case}}
+    \caption{Dae. Ad quatur autat ut porepel itemoles dolor autem fuga. Bus quia con nessunti as remo di quatus non perum que nimus. (a) Case I. (b) Case II.}
+    \label{fig_sim}
 \end{figure*}
 
 \lipsum[1-3]
@@ -68,18 +68,18 @@ Antonova \etal~\cite{antonova_2021_SequentialTopologicalRepresentations} propose
 
 \begin{table*}
     \caption[Comparison of runtime and multi-instance capability between popular pose-estimation algorithms.]{Comparison of runtime and multi-instance capability between popular pose-estimation algorithms.}
-\centering
+    \centering
     \begin{tabular}{c c c c c c c}
-    \toprule
-    & \makecell{PVNet$^*$\\} & \makecell{PoseCNN +\\ICP~} & \makecell{DOPD\\ } & \makecell{DenseFusion\\} & \makecell{SSD6D+\\ICP~} & \makecell{DOPE\\} \\
-    \midrule
-    Modality    &  RGB & RGB+D & RGB & RGBD & RGB+D & RGB \\
-    \midrule
-    Multi-Instance & \xmark & \xmark & \xmark & \xmark & \cmark & \cmark  \\
-    \midrule
-    fps &  25 & 0.1 & 33 & 16 & 10 &  10\\
-    \bottomrule
-    \multicolumn{7}{l}{\rule{0pt}{3.5ex} \textit{\makecell[l]{$^*$The reported runtime of PVNet is the based on the conference version, which does not incorporate \\ the instance-level segmentation pre-processing pipeline.}}}
+        \toprule
+                       & \makecell{PVNet$^*$\\} & \makecell{PoseCNN +                                                                            \\ICP~} & \makecell{DOPD\\ } & \makecell{DenseFusion\\} & \makecell{SSD6D+\\ICP~} & \makecell{DOPE\\} \\
+        \midrule
+        Modality       & RGB                                          & RGB+D               & RGB    & RGBD   & RGB+D  & RGB                                           \\
+        \midrule
+        Multi-Instance & \xmark                                       & \xmark              & \xmark & \xmark & \cmark & \cmark                                        \\
+        \midrule
+        fps            & 25                                           & 0.1                 & 33     & 16     & 10     & 10                                            \\
+        \bottomrule
+        \multicolumn{7}{l}{\rule{0pt}{3.5ex} \textit{\makecell[l]{$^*$The reported runtime of PVNet is the based on the conference version, which does not incorporate \\ the instance-level segmentation pre-processing pipeline.}}}
     \end{tabular}
     \label{tab:pose_compare}
 \end{table*}
@@ -98,20 +98,20 @@ Antonova \etal~\cite{antonova_2021_SequentialTopologicalRepresentations} propose
     \caption{Per action recognition performance.}
     \centering
     \begin{tabular}{c c c c}
-	\toprule
-          \textbf{Action}&\textbf{precision}&\textbf{recall}&\textbf{f1-score}\\
-			\midrule
-            no assembly action &0.72&0.80&0.75\\
-            reach&0.40&0.13&0.14\\
-            flip table top&0.79&0.80&0.79\\
-            flip table&0.64&0.52&0.53\\
-            spin leg&0.79&0.61&0.66\\
-            align leg&0.48&0.37&0.40\\
-            rotate table&0.66&0.56&0.56\\
-            human grasp&0.27&0.17&0.13\\
-            \midrule
-            Average&0.59&0.49&0.50\\
-         \bottomrule
+        \toprule
+        \textbf{Action}    & \textbf{precision} & \textbf{recall} & \textbf{f1-score} \\
+        \midrule
+        no assembly action & 0.72               & 0.80            & 0.75              \\
+        reach              & 0.40               & 0.13            & 0.14              \\
+        flip table top     & 0.79               & 0.80            & 0.79              \\
+        flip table         & 0.64               & 0.52            & 0.53              \\
+        spin leg           & 0.79               & 0.61            & 0.66              \\
+        align leg          & 0.48               & 0.37            & 0.40              \\
+        rotate table       & 0.66               & 0.56            & 0.56              \\
+        human grasp        & 0.27               & 0.17            & 0.13              \\
+        \midrule
+        Average            & 0.59               & 0.49            & 0.50              \\
+        \bottomrule
     \end{tabular}
     \label{tab:results:per_action_performance}
 \end{table}
