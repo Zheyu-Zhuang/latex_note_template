@@ -15,7 +15,7 @@
 
 \begin{document}
 
-\title{\LARGE \bf The Best Title (with A Catchy Acronym)}
+\title{\LARGE \bf S2S-Net: Shape-to-Shape Deformable Object Manipulation}
 \author{Author A$^{1}$ and Author B$^{2}$
     \thanks{*Author contributions}
     \thanks{$^{1}$AuthorA affiliations and contact info
@@ -24,109 +24,77 @@
     \thanks{$^{2}$AuthorB affiliations and contact info
             {\tt\small authorB@mail.com}
     }
-    \thanks{This project is funded by ...}
+    \thanks{This project is funded by \dots}
 }
 \maketitle
 
 \begin{abstract}
-    \lipsum[1-3]
+    It will be a good paper.
 \end{abstract}
+
+%-----------------------------------------------------
+% Useful Examples
+%-----------------------------------------------------
+
+% % Figure with sub-figs
+% \begin{figure*}[!t]
+%     \centering
+%     \subfloat[]{\includegraphics[width=0.4\textwidth]{asset/placeholder_image.jpeg}%
+%         \label{fig_first_case}}
+%     \hfil
+%     \subfloat[]{\includegraphics[width=0.4\textwidth]{asset/placeholder_image.jpeg}%
+%         \label{fig_second_case}}
+%     \caption{Dae. Ad quatur autat ut porepel itemoles dolor autem fuga. Bus quia con nessunti as remo di quatus non perum que nimus. (a) Case I. (b) Case II.}
+%     \label{fig_sim}
+% \end{figure*}
+
+
+%% Table with table footnote
+% \begin{table*}
+%     \caption[Comparison of runtime and multi-instance capability between popular pose-estimation algorithms.]{Comparison of runtime and multi-instance capability between popular pose-estimation algorithms.}
+%     \centering
+%     \begin{tabular}{c c c c c c c}
+%         \toprule
+%         & \makecell{PVNet$^*$ \\ABC} & \makecell{PoseCNN +\\ICP~} & \makecell{DOPD\\ ABC} & \makecell{DenseFusion\\2} & \makecell{SSD6D+\\ICP~} & \makecell{DOPE} \\
+%         \midrule
+%         Modality       & RGB    & RGB+D  & RGB    & RGBD   & RGB+D  & RGB \\
+%         \midrule
+%         Multi-Instance & \xmark & \xmark & \xmark & \xmark & \cmark & \cmark \\
+%         \midrule
+%         fps            & 25     & 0.1    & 33     & 16     & 10     & 10 \\
+%         \bottomrule
+%         \multicolumn{7}{l}{\rule{0pt}{3.5ex} \textit{\makecell[l]{$^*$The reported runtime of PVNet is the based on the conference version, which does not incorporate \\ the instance-level segmentation pre-processing pipeline.}}}
+%     \end{tabular}
+%     \label{tab:pose_compare}
+% \end{table*}
 
 %-----------------------------------------------------
 % Main Matter
 %-----------------------------------------------------
 
 \section{Introduction}
-
-\lipsum[1-3]
-
-
-%-----------------------------------------------------
-
+\input{section/00_intro}
+%
 \section{Related Work}
-\lipsum[1-3]
-
-\begin{figure*}[!t]
-    \centering
-    \subfloat[]{\includegraphics[width=0.4\textwidth]{asset/placeholder_image.jpeg}%
-        \label{fig_first_case}}
-    \hfil
-    \subfloat[]{\includegraphics[width=0.4\textwidth]{asset/placeholder_image.jpeg}%
-        \label{fig_second_case}}
-    \caption{Dae. Ad quatur autat ut porepel itemoles dolor autem fuga. Bus quia con nessunti as remo di quatus non perum que nimus. (a) Case I. (b) Case II.}
-    \label{fig_sim}
-\end{figure*}
-
-\lipsum[1-3]
-
-
-%-----------------------------------------------------
-
+\input{section/01_related_work}
+%
 \section{Methodology}
-
-Antonova \etal~\cite{antonova_2021_SequentialTopologicalRepresentations} proposed bla.
-
-\begin{table*}
-    \caption[Comparison of runtime and multi-instance capability between popular pose-estimation algorithms.]{Comparison of runtime and multi-instance capability between popular pose-estimation algorithms.}
-    \centering
-    \begin{tabular}{c c c c c c c}
-        \toprule
-        & \makecell{PVNet$^*$ \\ABC} & \makecell{PoseCNN +\\ICP~} & \makecell{DOPD\\ ABC} & \makecell{DenseFusion\\2} & \makecell{SSD6D+\\ICP~} & \makecell{DOPE} \\
-        \midrule
-        Modality       & RGB    & RGB+D  & RGB    & RGBD   & RGB+D  & RGB \\
-        \midrule
-        Multi-Instance & \xmark & \xmark & \xmark & \xmark & \cmark & \cmark \\
-        \midrule
-        fps            & 25     & 0.1    & 33     & 16     & 10     & 10 \\
-        \bottomrule
-        \multicolumn{7}{l}{\rule{0pt}{3.5ex} \textit{\makecell[l]{$^*$The reported runtime of PVNet is the based on the conference version, which does not incorporate \\ the instance-level segmentation pre-processing pipeline.}}}
-    \end{tabular}
-    \label{tab:pose_compare}
-\end{table*}
-
-\lipsum[1-3]
-
-
-
-
-
-%-----------------------------------------------------
-
+\input{section/02_methodology.tex}
+%
 \section{Experiments}
-
-\begin{table}
-    \caption{Per action recognition performance.}
-    \centering
-    \begin{tabular}{c c c c}
-        \toprule
-        \textbf{Action}    & \textbf{precision} & \textbf{recall} & \textbf{f1-score} \\
-        \midrule
-        no assembly action & 0.72               & 0.80            & 0.75 \\
-        reach              & 0.40               & 0.13            & 0.14 \\
-        flip table top     & 0.79               & 0.80            & 0.79 \\
-        flip table         & 0.64               & 0.52            & 0.53 \\
-        spin leg           & 0.79               & 0.61            & 0.66 \\
-        align leg          & 0.48               & 0.37            & 0.40 \\
-        rotate table       & 0.66               & 0.56            & 0.56 \\
-        human grasp        & 0.27               & 0.17            & 0.13 \\
-        \midrule
-        Average            & 0.59               & 0.49            & 0.50 \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:results:per_action_performance}
-\end{table}
-
-
-
-%-----------------------------------------------------
-
+\input{section/03_experiments.tex}
+%
 \section{Conclusion}
-
+\input{section/05_conclusion.tex}
+%
+\section{Results}
+\input{section/04_results.tex}
 
 %-----------------------------------------------------
-% References
+% Bibliography
 %-----------------------------------------------------
-\bibliographystyle{util/IEEEtranS}
-\bibliography{bib/IEEEabrv, bib/Deformable-Objects}
+
+% \bibliographystyle{util/IEEEtranS}
+% \bibliography{bib/IEEEabrv, bib/Deformable-Objects}
 
 \end{document}
