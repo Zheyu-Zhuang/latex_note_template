@@ -1,0 +1,167 @@
+%% This file contains the explicit notation definitions
+%% DO NOT import packages within this file.
+
+%---------------------------------------------------------
+% Spatial Transformation
+%---------------------------------------------------------
+
+% Frame
+\providecommand{\frameX}[1]{\{#1\}}
+
+% Transformation 
+% Usege: \tf[1][2]{3}[4][5]. If one optional argument appears on either side of var, it will be considered as the first argument on that side.
+% #1 (optional): where the quantity is expressed w.r.t or the coordinates
+% #2 (optional): where quantity is the measured w.r.t or reference.
+% #3 (mendatory): the symbol of the transformation, typically R, t, X
+% #4 (optional): the tip or index.
+% #5 (optional): the operator or superscript - usually \top, or \vee, or \times, etc.
+
+\NewDocumentCommand{\tf}{O{} O{} m o O{}}  
+  {
+    \tensor*[^{#1}_{#2}]{\mathbf{#3}}{_{#4}^{#5}}
+  }
+
+%---------------------------------------------------------
+% Sets
+%---------------------------------------------------------
+
+\providecommand{\C}{\mathbb{C}} % complex Number
+\providecommand{\N}{\mathbb{N}} % Natural
+\providecommand{\R}{\mathbb{R}} % Real
+\providecommand{\Z}{\mathbb{Z}} % Integer
+
+% Lie groups
+\providecommand{\SO}{\mathbf{SO}}
+\providecommand{\SL}{\mathbf{SL}}
+\providecommand{\GL}{\mathbf{GL}}
+\providecommand{\SE}{\mathbf{SE}}
+\providecommand{\SIM}{\mathbf{SIM}}
+\providecommand{\grpG}{\mathbf{G}}
+\providecommand{\grpH}{\mathbf{H}}
+\providecommand{\grpK}{\mathbf{K}}
+\providecommand{\grpN}{\mathbf{N}}
+\providecommand{\grpR}{\mathbf{R}}
+\providecommand{\grpS}{\mathbf{S}}
+\providecommand{\grpZ}{\mathbf{Z}}
+
+% Lie algebras
+\providecommand{\gothgl}{\mathfrak{gl}}
+\providecommand{\gothso}{\mathfrak{so}}
+\providecommand{\gothse}{\mathfrak{se}}
+\providecommand{\gothsl}{\mathfrak{sl}}
+\providecommand{\gothsim}{\mathfrak{sim}}
+\providecommand{\gothsot}{\mathfrak{sot}}
+\providecommand{\gothmr}{\mathfrak{mr}}
+\providecommand{\gothe}{\mathfrak{e}}
+\providecommand{\gothg}{\mathfrak{g}}
+\providecommand{\gothh}{\mathfrak{h}}
+\providecommand{\gothk}{\mathfrak{k}}
+\providecommand{\gothl}{\mathfrak{l}}
+\providecommand{\gothn}{\mathfrak{n}}
+\providecommand{\gothr}{\mathfrak{r}}
+\providecommand{\goths}{\mathfrak{s}}
+\providecommand{\gothu}{\mathfrak{u}}
+\providecommand{\gothv}{\mathfrak{v}}
+\providecommand{\gothz}{\mathfrak{z}}
+\providecommand{\gothB}{\mathfrak{B}}
+\providecommand{\gothK}{\mathfrak{K}}
+\providecommand{\gothL}{\mathfrak{L}}
+\providecommand{\gothR}{\mathfrak{R}}
+\providecommand{\gothU}{\mathfrak{U}}
+\providecommand{\gothV}{\mathfrak{V}}
+\providecommand{\gothW}{\mathfrak{W}}
+\providecommand{\gothX}{\mathfrak{X}} % as in X(M)
+\providecommand{\gothZ}{\mathfrak{Z}}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% shortcuts
+\providecommand{\so}{\mathfrak{so}}
+\providecommand{\se}{\mathfrak{se}}
+\providecommand{\sot}{\mathfrak{sot}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% vector spaces
+\providecommand{\vecG}{\mathbb{G}} % tangent space at X_0
+\providecommand{\vecK}{\mathbb{K}} % kernel of linear operator.
+\providecommand{\vecO}{\mathbb{O}}
+\providecommand{\vecU}{\mathbb{U}}
+\providecommand{\vecV}{\mathbb{V}}
+\providecommand{\vecW}{\mathbb{W}}
+\providecommand{\vecY}{\mathbb{Y}}
+\providecommand{\bfV}{\mathbf{V}}
+\providecommand{\calV}{\mathcal{V}}
+
+% Euclidean space
+\providecommand{\eucE}{\mathbb{E}}
+
+% Matrix spaces
+\providecommand{\Sym}{\mathbb{S}} % symmetric matrix $\Sym(n)$
+\providecommand{\PD}{\mathbb{S}_+} % positive definite matrices.
+
+% Frame bundle
+\providecommand{\FSO}{\calF_{T \SO}}
+\providecommand{\FB}{\calF} % framebundle.  But also extended function.
+
+%---------------------------------------------------------
+% functions and mapping
+%---------------------------------------------------------
+
+% operators
+\DeclareMathOperator{\inv}{inv}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\vex}{vrp}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\kernel}{ker}
+\DeclareMathOperator{\image}{im}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+
+% maps
+\providecommand{\id}{\mathrm{id}} % identity map
+\providecommand{\pr}{\mathbb{P}} % projection
+\providecommand{\prse}{\mathbb{P}_{\se}} % projection
+\providecommand{\mm}{\mathbb{m}} % monomorphism
+
+% cost
+\providecommand{\cost}{\ell} %% local costs
+\providecommand{\Lyap}{\mathcal{L}} %% aggregate cost
+
+%---------------------------------------------------------
+% Differential notation
+%---------------------------------------------------------
+
+% differentials
+\providecommand{\tT}{\mathrm{T}} % tangent bundles
+\providecommand{\td}{\mathrm{d}}
+\providecommand{\tD}{\mathrm{D}}
+\providecommand{\tL}{\mathrm{L}}
+\providecommand{\pd}{\partial}
+\providecommand{\ddt}{\frac{\td}{\td t}}
+\providecommand{\Ddt}{\frac{\tD}{\td t}}
+\providecommand{\ddtau}{\frac{\td}{\td \tau}}
+\providecommand{\pdt}{\frac{\partial}{\partial t}}
+\providecommand{\pdtau}{\frac{\partial}{\partial \tau}}
+\providecommand{\dt}{\td t}
+\providecommand{\dtau}{\td \tau}
+\providecommand{\Hess}{\mathrm{Hess}}
+
+
+%---------------------------------------------------------
+% Variables
+%---------------------------------------------------------
+
+% group elements
+\providecommand{\eye}[1]{\mathbf{I}_{#1}} % identity of a matrix group.
+
+% vector space elements
+\providecommand{\eb}{\mathbf{e}} % \providecommand{\eb}{\vec{e}}
+
+
+
+
+

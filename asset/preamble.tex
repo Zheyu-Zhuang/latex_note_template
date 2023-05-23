@@ -1,0 +1,45 @@
+% Maths
+\usepackage{amssymb}
+\usepackage{tensor}
+\usepackage{cancel}
+\usepackage{algorithm}
+\usepackage{mathtools}
+
+% Tables
+\usepackage{tabularx}
+\usepackage{booktabs} % well-spaced, horizontal lines
+\usepackage{makecell}
+\usepackage{multirow}
+
+% % Figures
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+
+% Latex Macro & Utils
+\usepackage{xparse} % macros with optional args ande default values
+\usepackage{xcolor}
+\usepackage{framed} % callout-block background
+\usepackage{hyperref}
+\usepackage[acronym]{glossaries}
+\usepackage{pifont} % get good-looking marks
+\usepackage{lipsum} % random text
+
+
+% theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+% Shortcuts
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
