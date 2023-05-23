@@ -6,8 +6,8 @@
 \documentclass[letterpaper, 10 pt, conference, onecolumn]{IEEEtran}
 \IEEEoverridecommandlockouts % This command is only needed if you want to use the \thanks command
 
-\input{utils/preamble} % All the packages and some of the general new commands
-\input{utils/notation_defs} % For general notations defs
+\input{util/preamble} % All the packages and some of the general newcommands
+\input{util/notation_defs} % For general notations defs
 
 %-----------------------------------------------------
 % Front Matter
@@ -71,13 +71,13 @@ Antonova \etal~\cite{antonova_2021_SequentialTopologicalRepresentations} propose
     \centering
     \begin{tabular}{c c c c c c c}
         \toprule
-                       & \makecell{PVNet$^*$\\} & \makecell{PoseCNN +                                                                            \\ICP~} & \makecell{DOPD\\ } & \makecell{DenseFusion\\} & \makecell{SSD6D+\\ICP~} & \makecell{DOPE\\} \\
+                       & \makecell{PVNet$^*$ \\ABC} & \makecell{PoseCNN +\\ICP~} & \makecell{DOPD\\ ABC} & \makecell{DenseFusion\\} & \makecell{SSD6D+\\ICP~} & \makecell{DOPE} \\
         \midrule
-        Modality       & RGB                                          & RGB+D               & RGB    & RGBD   & RGB+D  & RGB                                           \\
+        Modality       & RGB                 & RGB+D  & RGB    & RGBD   & RGB+D  & RGB \\
         \midrule
-        Multi-Instance & \xmark                                       & \xmark              & \xmark & \xmark & \cmark & \cmark                                        \\
+        Multi-Instance & \xmark              & \xmark & \xmark & \xmark & \cmark & \cmark \\
         \midrule
-        fps            & 25                                           & 0.1                 & 33     & 16     & 10     & 10                                            \\
+        fps            & 25                  & 0.1    & 33     & 16     & 10     & 10 \\
         \bottomrule
         \multicolumn{7}{l}{\rule{0pt}{3.5ex} \textit{\makecell[l]{$^*$The reported runtime of PVNet is the based on the conference version, which does not incorporate \\ the instance-level segmentation pre-processing pipeline.}}}
     \end{tabular}
@@ -101,16 +101,16 @@ Antonova \etal~\cite{antonova_2021_SequentialTopologicalRepresentations} propose
         \toprule
         \textbf{Action}    & \textbf{precision} & \textbf{recall} & \textbf{f1-score} \\
         \midrule
-        no assembly action & 0.72               & 0.80            & 0.75              \\
-        reach              & 0.40               & 0.13            & 0.14              \\
-        flip table top     & 0.79               & 0.80            & 0.79              \\
-        flip table         & 0.64               & 0.52            & 0.53              \\
-        spin leg           & 0.79               & 0.61            & 0.66              \\
-        align leg          & 0.48               & 0.37            & 0.40              \\
-        rotate table       & 0.66               & 0.56            & 0.56              \\
-        human grasp        & 0.27               & 0.17            & 0.13              \\
+        no assembly action & 0.72               & 0.80            & 0.75 \\
+        reach              & 0.40               & 0.13            & 0.14 \\
+        flip table top     & 0.79               & 0.80            & 0.79 \\
+        flip table         & 0.64               & 0.52            & 0.53 \\
+        spin leg           & 0.79               & 0.61            & 0.66 \\
+        align leg          & 0.48               & 0.37            & 0.40 \\
+        rotate table       & 0.66               & 0.56            & 0.56 \\
+        human grasp        & 0.27               & 0.17            & 0.13 \\
         \midrule
-        Average            & 0.59               & 0.49            & 0.50              \\
+        Average            & 0.59               & 0.49            & 0.50 \\
         \bottomrule
     \end{tabular}
     \label{tab:results:per_action_performance}
@@ -126,7 +126,7 @@ Antonova \etal~\cite{antonova_2021_SequentialTopologicalRepresentations} propose
 %-----------------------------------------------------
 % References
 %-----------------------------------------------------
-\bibliographystyle{utils/IEEEtranS}
+\bibliographystyle{util/IEEEtranS}
 \bibliography{bib/IEEEabrv, bib/Deformable-Objects}
 
 \end{document}
