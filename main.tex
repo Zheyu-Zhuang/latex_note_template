@@ -6,7 +6,7 @@
 \documentclass[letterpaper, 10 pt, conference, onecolumn]{IEEEtran}
 \IEEEoverridecommandlockouts % This command is only needed if you want to use the \thanks command
 
-\input{util/preamble} % All the packages and some of the general newcommands
+\input{util/preamble} % All the packages and some of the general new commands
 \input{util/notation_defs} % For general notations defs
 
 %-----------------------------------------------------
@@ -71,13 +71,13 @@ Antonova \etal~\cite{antonova_2021_SequentialTopologicalRepresentations} propose
     \centering
     \begin{tabular}{c c c c c c c}
         \toprule
-                       & \makecell{PVNet$^*$ \\ABC} & \makecell{PoseCNN +\\ICP~} & \makecell{DOPD\\ ABC} & \makecell{DenseFusion\\} & \makecell{SSD6D+\\ICP~} & \makecell{DOPE} \\
+                       & \makecell{PVNet$^*$ \\ABC} & \makecell{PoseCNN +\\ICP~} & \makecell{DOPD\\ ABC} & \makecell{DenseFusion\\2} & \makecell{SSD6D+\\ICP~} & \makecell{DOPE} \\
         \midrule
-        Modality       & RGB                 & RGB+D  & RGB    & RGBD   & RGB+D  & RGB \\
+        Modality       & RGB                        & RGB+D                      & RGB                   & RGBD                      & RGB+D                   & RGB \\
         \midrule
-        Multi-Instance & \xmark              & \xmark & \xmark & \xmark & \cmark & \cmark \\
+        Multi-Instance & \xmark                     & \xmark                     & \xmark                & \xmark                    & \cmark                  & \cmark \\
         \midrule
-        fps            & 25                  & 0.1    & 33     & 16     & 10     & 10 \\
+        fps            & 25                         & 0.1                        & 33                    & 16                        & 10                      & 10 \\
         \bottomrule
         \multicolumn{7}{l}{\rule{0pt}{3.5ex} \textit{\makecell[l]{$^*$The reported runtime of PVNet is the based on the conference version, which does not incorporate \\ the instance-level segmentation pre-processing pipeline.}}}
     \end{tabular}
